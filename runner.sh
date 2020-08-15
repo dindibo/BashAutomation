@@ -4,6 +4,8 @@ FAIL=0
 EXT="./tests/"
 FILES=$(cd $EXT;ls ???-test-*.sh -1)
 
+> "$EXT".log
+
 for name in $FILES
 do
 	(cd $EXT;./$name) 2>> "$EXT".log 1>&2
